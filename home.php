@@ -7,7 +7,6 @@ include 'style.css';
 ?>
 </style>
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -17,6 +16,9 @@ include 'style.css';
 </head>
 <body>
 	<?php include 'components/header.php'; ?>
+	<div class="main">
+		<?php include 'components/footer.php'; ?>
+	</div>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 	<script src="script.js"></script>
 	<?php include 'components/alert.php'; ?>
