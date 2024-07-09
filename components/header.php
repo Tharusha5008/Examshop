@@ -9,9 +9,9 @@
  			<a href="contact.php">conatct us</a>
  		</nav>
  		<div class="icons">
- 			<i class="bx bxs-user" id="user-btn"></i>
- 			<a href="wishlist.php" class="cart-btn"><i class="bx bxs-heart"></i><sup>0</sup></a>
- 			<a href="cart.php" class="cart-btn"><i class="bx bxs-cart-download"></i><sup>0</sup></a>
+ 			<a href="profile.php" class="cart-btn"><i class="fa-solid fa-user" id="user-btn"></i></a>
+ 			<a href="wishlist.php" class="cart-btn"><i class="fa-regular fa-heart"></i><sup>0</sup></a>
+ 			<a href="cart.php" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i><sup>0</sup></a>
  			<i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i>
  		</div>
  		<div class="user-box">

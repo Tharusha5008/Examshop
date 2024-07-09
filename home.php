@@ -12,12 +12,12 @@ include 'style.css';
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylsheet'>
+	<link href='https://unpkg.com/browse/boxicons@2.1.4/css/boxicons.css' rel='stylsheet'>
 	<title>Green Cofee - home page</title>
 </head>
 <body>
 	<?php include 'components/header.php'; ?>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 	<script src="script.js"></script>
 	<?php include 'components/alert.php'; ?>
 </body>
