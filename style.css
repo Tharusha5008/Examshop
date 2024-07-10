@@ -41,7 +41,9 @@ a{
 .title p{
 	text-transform: capitalize;
 }
-
+.title .logo{
+	width: 100px;
+}
 ul{
 	list-style: none;
 }
@@ -438,6 +440,103 @@ header.scrolled{
 	bottom: -3%;
 
 }
+.shop-category .box{
+	position: relative;
+	color: #fff;
+	margin-bottom: 2rem;
+}
+.shop-category .detail{
+	position: absolute;
+	top: 20%;
+	left: 5%;
+	line-height: 2;
+	text-align: center;
+}
+.shop-category .detail h1{
+	font-size: 2rem;
+}
+.shop-category .detail span{
+	font-size: 1.3rem;
+}
+
+.services{
+	padding: 3rem 0;
+	text-align: center;
+	background-image: url('components/img/bg.jpg');
+	line-height: 2;
+	margin: 3rem 0;
+}
+.services h3{
+	text-transform: capitalize;
+	color: var(--green);
+}
+.services img{
+	width: 30%;
+}
+.brand{
+	margin: 3rem auto;
+	text-align: center;
+
+}
+/*-------about  section--------*/
+.about-category{
+	max-width: 1200px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	margin: 2rem auto;
+}
+.about-category .box{
+	position: relative;
+	margin: 1rem;
+	box-shadow: var(--box-shadow);
+}
+.about-category .box img{
+	width: 60%;
+}
+.about-category .box:nth-child(3) img{
+	width: 75%;
+}
+.about-category .box .detail{
+	position: absolute;
+	top: 30%;
+	right: 10%;
+}
+.about-category .box .detail h1{
+	margin-bottom: 1.5rem;
+}
+.about-category .box .detail span{
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #555;
+}
+.about-category .box .detail .btn{
+	opacity: .6;
+}
+
+.about .row{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.about .row .detail{
+	width: 50%;
+	margin: 1rem;
+	line-height: 1.5;
+	text-align: center;
+}
+.about .row .detail p{
+	margin-bottom: 2rem;
+}
+.about .row .img-box{
+	width: 50%;
+}
+.about .row .detail h1{
+	text-align: center;
+	margin: 1rem 0;
+	
+}
+
+
 /*-------footer section--------*/
 .top-footer{
 	width: 97.5%;

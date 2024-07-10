@@ -156,6 +156,77 @@ include 'style.css';
 				</div>
 			</div>
 		</section>
+		<section class="shop-category">
+			<div class="box-container">
+				<div class="box">
+					<img src="components/img/6.jpg">
+					<div class="detail">
+						<span>BIG OFFER</span>
+						<h1>Extra 15% off</h1>
+						<a href="view_products.php" class="btn">shop now</a>
+					</div>
+				</div>
+				<div class="box">
+					<img src="components/img/6.jpg">
+					<div class="detail">
+						<span>new taste</span>
+						<h1>coffee house</h1>
+						<a href="view_products.php" class="btn">shop now</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="services">
+			<div class="box-container">
+				<div class="box">
+					<img src="components/img/icon2.png">
+					<div class="detail">
+						<h3>great savings</h3>
+						<p>save big on evry order</p>
+					</div>
+				</div>
+				<div class="box">
+					<img src="components/img/icon1.png">
+					<div class="detail">
+						<h3>24*7 support</h3>
+						<p>we awake evrytime</p>
+					</div>
+				</div>
+				<div class="box">
+					<img src="components/img/icon0.png">
+					<div class="detail">
+						<h3>gift vouchers</h3>
+						<p>get a gift</p>
+					</div>
+				</div>
+				<div class="box">
+					<img src="components/img/icon.png">
+					<div class="detail">
+						<h3>Global</h3>
+						<p>we are at anyplace</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="brands">
+			<div class="box-container">
+				<div class="box">
+					<img src="components/img/brand (1).jpg">
+				</div>
+				<div class="box">
+					<img src="components/img/brand (2).jpg">
+				</div>
+				<div class="box">
+					<img src="components/img/brand (3).jpg">
+				</div>
+				<div class="box">
+					<img src="components/img/brand (4).jpg">
+				</div>
+			    <div class="box">
+					<img src="components/img/brand (5).jpg">
+				</div>
+			</div>
+		</section>
 		<!--home slider end-->
 		<?php include 'components/footer.php'; ?>
 	</div>
