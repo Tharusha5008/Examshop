@@ -1,3 +1,16 @@
+ <<!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    
+  
+ 	<title></title>
+ </head>
+ <body>
+ 
+ 
  <header class="header">
  	<div class="flex">
  		<a href="home.php" class="logo"><img src="components/img/logo.jpg"></a>
@@ -6,7 +19,7 @@
  			<a href="view_products.php">Meals</a>
  			<a href="view_products.php">Beverages</a>
  			<a href="order.php">Bookings</a>
- 			<a href="contact.php">Table Reserve</a>
+ 			<a href="tableres.php">Table Reserve</a>
  			<a href="register.php">my account</a>
  			<a href="about.php">about us</a>
  		</nav>
@@ -27,3 +40,5 @@
  		</div>
  	</div>
  </header>
+ </body>
+ </html>

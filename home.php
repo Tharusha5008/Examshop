@@ -237,6 +237,7 @@ include 'style.css';
 		<?php include 'components/footer.php'; ?>
 	</div>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+	
 	<script src="script.js"></script>
 	<?php include 'components/alert.php'; ?>
 </body>
