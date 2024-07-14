@@ -3,13 +3,15 @@
  		<a href="home.php" class="logo"><img src="components/img/logo.jpg"></a>
  		<nav class="navbar">
  			<a href="home.php">home</a>
- 			<a href="view_product.php">products</a>
- 			<a href="order.php">orders</a>
+ 			<a href="view_products.php">Meals</a>
+ 			<a href="view_products.php">Beverages</a>
+ 			<a href="order.php">Bookings</a>
+ 			<a href="contact.php">Table Reserve</a>
+ 			<a href="register.php">my account</a>
  			<a href="about.php">about us</a>
- 			<a href="contact.php">conatct us</a>
  		</nav>
  		<div class="icons">
- 			<i class="fa-solid fa-user" id="user-btn"></i>
+ 			<a href="welcome.php" class="cart-btn"><i class="fa-solid fa-user" id="user-btn"></i></a>
  			<a href="wishlist.php" class="cart-btn"><i class="fa-regular fa-heart"></i><sup>0</sup></a>
  			<a href="cart.php" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i><sup>0</sup></a>
  			<i class="fa-solid fa-bars" id="menu-btn" style="font-size: 2rem;"></i>

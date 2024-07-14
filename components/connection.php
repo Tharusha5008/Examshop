@@ -1,13 +1,13 @@
 <?php
 
-$db_name = 'mysql:host=localhost;dbname=library';
+$db_name = 'mysql:host=localhost;dbname=shop_dp';
 $db_user='root';
 $db_password='Vismine@123';
 
 $conn = new PDO($db_name,$db_user,$db_password);
 
 function unique_id(){
-	$chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charLength = strlen($chars);
     $randomString ='';
     for ($i=0; $i < 20 ; $i++) {
