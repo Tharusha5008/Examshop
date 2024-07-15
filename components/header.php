@@ -25,8 +25,10 @@
  		</nav>
  		<div class="icons">
  			<a href="welcome.php" class="cart-btn"><i class="fa-solid fa-user" id="user-btn"></i></a>
- 			<a href="wishlist.php" class="cart-btn"><i class="fa-regular fa-heart"></i><sup>0</sup></a>
- 			<a href="cart.php" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i><sup>0</sup></a>
+ 			
+ 			<a href="wishlist.php" class="cart-btn"><i class="fa-regular fa-heart"></i></a>
+ 			
+ 			<a href="cart.php" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></a>
  			<i class="fa-solid fa-bars" id="menu-btn" style="font-size: 2rem;"></i>
  		</div>
  		<div class="user-box">

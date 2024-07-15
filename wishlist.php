@@ -59,7 +59,7 @@ if (isset($_POST['add_to_cart'])) {
 	if ($varify_cart->rowCount() > 0) {
 		$warning_msg[] = 'product already exist in your wishlist';
 		echo "<script>alert('product already exist in your wishlist');</script>";
-	}elseif ($max_cart_items->rowCount() > 20) {
+	}elseif ($max_cart_items->rowCount() > 0) {
 		$warning_msg[] = 'cart is full';
 		echo "<script>alert('cart is full.');</script>";
 	}else{
@@ -71,6 +71,23 @@ if (isset($_POST['add_to_cart'])) {
 		$insert_cart->execute([$id,$user_id,$product_id,$fetch_price['price'],$qty]);
 		$success_msg[]='product added to cart successfully';
 		echo "<script>alert('product added to cart successfully.');</script>";
+	}
+}
+//delete btn
+if (isset($_POST['delete_item'])) {
+	$wishlist_id = $_POST['wishlist_id'];
+	$wishlist_id = filter_var($wishlist_id, FILTER_SANITIZE_STRING);
+
+	$varify_delete_items = $conn->prepare("SELECT * FROM wishlist WHERE id = ?");
+	$varify_delete_items->execute([$wishlist_id]);
+
+	if ($varify_delete_items->rowCount()>0) {
+		$delete_wishlist_id = $conn->prepare("DELETE FROM wishlist WHERE id = ?");
+		$delete_wishlist_id->execute([$wishlist_id]);
+		echo "<script>alert('wishlist item deleted successfully.');</script>";
+		// code...
+	}else{
+		echo "<script>alert('something went wrong.');</script>";
 	}
 }
 ?>
@@ -91,43 +108,50 @@ include 'style.css';
 	<?php include 'components/header.php'; ?>
 	<div class="main">
 		<div class="banner">
-			<h1>Shop</h1>
+			<h1>wish list</h1>
 		</div>
 		<div class="title2">
-			<a href="home.php">home  </a><span>/ our shop</span>
+			<a href="home.php">home  </a><span>/ wishlist</span>
 		</div>
 		<section class="products">
+			<h1 class="title">products added in wishlist</h1>
 			<div class="box-container">
 				<?php
-				$select_products = $conn->prepare("SELECT * FROM productst");
-				$select_products->execute();
-                if ($select_products->rowCount() >0) {
-                     while ($fetch_products = $select_products->fetch(PDO :: FETCH_ASSOC)) {
-                  ?>
-                <form action="" method="post" class="box">
-                   <img src="image/<?=$fetch_products['image'];?>" class="img">
-                   <div class="btn">
-                   	<button type="submit" name="add_to_cart"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <button type="submit" name="add_to_wishlist"><i class="fa-solid fa-heart"></i></button>
+                    $grand_total = 0;
+                    $select_wishlist = $conn->prepare("SELECT * FROM wishlist WHERE user_id = ?");
+                    $select_wishlist->execute([$user_id]);
+                    if ($select_wishlist->rowCount()>0) {
+                    	while($fetch_wishlist = $select_wishlist->fetch(PDO::FETCH_ASSOC)){
+                    		$select_products = $conn->prepare("SELECT * FROM productst WHERE id= ?");
+                    		$select_products->execute([$fetch_wishlist['product_id']]);
+                    		if ($select_products->rowCount()>0) {
+                    			$fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)
+                    	
+
+				?>
+				<form method="post" action="" class="box">
+					<input type="hidden" name="wishlist_id" value="<?=$fetch_wishlist['id']; ?>">
+					<img src="image/<?=$fetch_products['image']; ?>">
+					<div class="button">
+					<button type="submit" name="add_to_cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="fa-solid fa-eye"></a>
-                   </div>
-                 <h3 class="name"><?= $fetch_products['name'];?></h3>
-                 <input type="hidden" name="product_id" value="<?=$fetch_products['id'];?>">
-                 <div class="flex">
-                 	<p class="price">price <?=$fetch_products['price'];?>/-</p>
-                 	<input type="number" name="qty" required min="1" max="99" maxlength="2" class="qty">
-
-                 </div>
-                 <a href="checkout.php?get_id=<?=$fetch_products['id']; ?>" class="btn">buy now </a>
-
-
-                </form>
-
-           <?php
+                    <button type="submit" name="delete_item" onclick="return confirm('delete this item');"><i class="fa-solid fa-trash"></i></button>
+                </div>
+                <h3 class="name"><?=$fetch_products['name']; ?></h3>
+                <input type="hidden" name="product_id" value="<?=$fetch_products['id']; ?>">
+                <div class="flex">
+                	<p class="price">price $<?=$fetch_products['price']; ?> /- </p>
+                </div>
+                <a href="checkout.php?get_id=<?=$fetch_products['id']; ?>" class="btn">buy now</a>
+				</form>
+				<?php 
+				            $grand_total+=$fetch_wishlist['price'];
+	                        }
+                    	}
+                    }else{
+                    	echo "<script>alert('no products yet.');</script>";
                     }
-                }else{
-                	echo '<p class="empty">no products added yet</p>';
-                }
+
 				?>
 			</div>
 		</section>
