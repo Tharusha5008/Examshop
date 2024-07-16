@@ -18,7 +18,7 @@
  			<a href="home.php">home</a>
  			<a href="view_products.php">Meals</a>
  			<a href="view_products.php">Beverages</a>
- 			<a href="order.php">Bookings</a>
+ 			<a href="view_order.php">Bookings</a>
  			<a href="tableres.php">Table Reserve</a>
  			<a href="register.php">my account</a>
  			<a href="about.php">about us</a>

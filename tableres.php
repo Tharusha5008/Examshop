@@ -150,11 +150,6 @@ echo "<script>alert('Something went wrong. Please try again.');</script>";
         </div>
       </div>
     </div>
-			<div class="title">
-				<img src="components/img/download.png" class="logo">
-				<h1>why choose us</h1>
-				<p>ay apiwa toragtte moko hetuwa</p>
-			</div>
 			<div class="box-container">
 				<div class="box">
 					<img src="components/img/icon2.png">
