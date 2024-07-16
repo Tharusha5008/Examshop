@@ -105,7 +105,7 @@ include 'style.css';
                      while ($fetch_products = $select_products->fetch(PDO :: FETCH_ASSOC)) {
                   ?>
                 <form action="" method="post" class="box">
-                   <img src="image/<?=$fetch_products['image'];?>" class="img">
+                   <img src="components/product/<?=$fetch_products['image'];?>" class="img">
                    <div class="btn">
                    	<button type="submit" name="add_to_cart"><i class="fa-solid fa-cart-shopping"></i></button>
                     <button type="submit" name="add_to_wishlist"><i class="fa-solid fa-heart"></i></button>

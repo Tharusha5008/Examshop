@@ -111,7 +111,7 @@ include 'style.css';
 		<section class="container">
 			<div class="box-container">
 			<div class="box">
-				<img src="components/img/about-us.jpg">
+				<img src="components/img/download.jpg">
 			</div>
 			<div class="box">
 				<img src="components/img/download.png">
@@ -137,27 +137,27 @@ include 'style.css';
 			</div>
 			<div class="box-container">
 				<div class="box">
+					<img src="components/img/14.jpg">
+					<a href="view_products.php" class="btn">shop now</a>
+				</div>
+				<div class="box">
+					<img src="components/img/15.jpg">
+					<a href="view_products.php" class="btn">shop now</a>
+				</div>
+				<div class="box">
+					<img src="components/img/16.jpg">
+					<a href="view_products.php" class="btn">shop now</a>
+				</div>
+				<div class="box">
+					<img src="components/img/17.jpeg">
+					<a href="view_products.php" class="btn">shop now</a>
+				</div>
+				<div class="box">
+					<img src="components/img/18.jpg">
+					<a href="view_products.php" class="btn">shop now</a>
+				</div>
+				<div class="box">
 					<img src="components/img/card.jpg">
-					<a href="view_products.php" class="btn">shop now</a>
-				</div>
-				<div class="box">
-					<img src="components/img/card0.jpg">
-					<a href="view_products.php" class="btn">shop now</a>
-				</div>
-				<div class="box">
-					<img src="components/img/card1.jpg">
-					<a href="view_products.php" class="btn">shop now</a>
-				</div>
-				<div class="box">
-					<img src="components/img/card2.jpg">
-					<a href="view_products.php" class="btn">shop now</a>
-				</div>
-				<div class="box">
-					<img src="components/img/10.jpg">
-					<a href="view_products.php" class="btn">shop now</a>
-				</div>
-				<div class="box">
-					<img src="components/img/6.webp">
 					<a href="view_products.php" class="btn">shop now</a>
 				</div>
 			</div>
@@ -165,7 +165,7 @@ include 'style.css';
 		<section class="shop-category">
 			<div class="box-container">
 				<div class="box">
-					<img src="components/img/6.jpg">
+					<img src="components/img/20.jpg">
 					<div class="detail">
 						<span>BIG OFFER</span>
 						<h1>Extra 15% off</h1>
@@ -173,7 +173,7 @@ include 'style.css';
 					</div>
 				</div>
 				<div class="box">
-					<img src="components/img/6.jpg">
+					<img src="components/img/21.jpeg">
 					<div class="detail">
 						<span>new taste</span>
 						<h1>coffee house</h1>

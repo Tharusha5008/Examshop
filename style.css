@@ -17,7 +17,7 @@ html{
 	-webkit-text-size-djust: 100%;
 }
 body{
-	background-image: url('components/img/body-bg.jpg');
+	background-image: url('components/img/body-bg1.jpg');
 	width: 100%;
 }
 .main{
@@ -296,19 +296,19 @@ header.scrolled{
 }
 
 .slide1{
-	background-image: url('components/img/slider.jpg');
+	background-image: url('components/img/40.jpg');
 }
 .slide2{
-	background-image: url('components/img/1.png');
+	background-image: url('components/img/41.jpg');
 }
 .slide3{ 
-	background-image: url('components/img/9.jpg');
+	background-image: url('components/img/33.jpg');
 }
 .slide4{
-	background-image: url('components/img/0.webp');
+	background-image: url('components/img/42.jpg');
 }
 .slide5{
-	background-image: url('components/img/4.jpg');
+	background-image: url('components/img/44.jpg');
 }
 
 .hero-dec-top,

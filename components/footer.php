@@ -9,7 +9,7 @@
 	<div class="overlay"></div>
 	<div class="footer-content">
 	    <div class="img-box">
-	        <img src="components/img/logo2.png">
+	        <img src="components/img/logo12.png">
 	    </div>
 	    <div class="inner-footer">
 	    	<div class="card">

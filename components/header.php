@@ -13,7 +13,7 @@
  
  <header class="header">
  	<div class="flex">
- 		<a href="home.php" class="logo"><img src="components/img/logo.jpg"></a>
+ 		<a href="home.php" class="logo"><img src="components/img/logo12.png"></a>
  		<nav class="navbar">
  			<a href="home.php">home</a>
  			<a href="view_products.php">Meals</a>
