@@ -28,8 +28,8 @@ include 'style.css';
 			<div class="slider__slider slide1">
 				<div class="overlay"></div>
 					<div class="slide-detail">
-						<h1>cat1 buy</h1>
-						<p>lorem ipsum dolor sit amet conseijdjcjx jcsndu</p>
+						<h1>EVENTS</h1>
+						<p>A Beautiful Place for your Occasions</p>
 						<a href="view_products.php" class="btn">shop now</a>
 					</div>
 					<div class="hero-dec-top"></div>
@@ -39,8 +39,8 @@ include 'style.css';
 			<div class="slider__slider slide2">
 				<div class="overlay"></div>
 					<div class="slide-detail">
-						<h1>cat2 buy</h1>
-						<p>lorem ipsum dolor sit amet conseijdjcjx jcsndu</p>
+						<h1>PIZZTA</h1>
+						<p>Taste the beauty of real pizza</p>
 						<a href="view_products.php" class="btn">shop now</a>
 					</div>
 					<div class="hero-dec-top"></div>
@@ -49,8 +49,8 @@ include 'style.css';
 			<div class="slider__slider slide3">
 				<div class="overlay"></div>
 					<div class="slide-detail">
-						<h1>cat3 buy</h1>
-						<p>lorem ipsum dolor sit amet conseijdjcjx jcsndu</p>
+						<h1>COFFEE</h1>
+						<p>Ceylon coffee premium edition</p>
 						<a href="view_products.php" class="btn">shop now</a>
 					</div>
 					<div class="hero-dec-top"></div>
@@ -59,8 +59,8 @@ include 'style.css';
 			<div class="slider__slider slide4">
 				<div class="overlay"></div>
 					<div class="slide-detail">
-						<h1>cat4 buy</h1>
-						<p>lorem ipsum dolor sit amet conseijdjcjx jcsndu</p>
+						<h1>DRINKS</h1>
+						<p>Taste the real Scotland Brands</p>
 						<a href="view_products.php" class="btn">shop now</a>
 					</div>
 					<div class="hero-dec-top"></div>
@@ -69,8 +69,8 @@ include 'style.css';
 			<div class="slider__slider slide5">
 				<div class="overlay"></div>
 					<div class="slide-detail">
-						<h1>cat5 buy</h1>
-						<p>lorem ipsum dolor sit amet conseijdjcjx jcsndu</p>
+						<h1>FAST FOODS</h1>
+						<p>Make it quicker</p>
 						<a href="view_products.php" class="btn">shop now</a>
 					</div>
 					<div class="hero-dec-top"></div>
@@ -85,25 +85,25 @@ include 'style.css';
 				<div class="box">
 					<img src="components/img/thumb2.jpg">
 					<h3>green Tea</h3>
-					<p>lorem ispsum green tea </p>
+					<p>Be healthy with green tea </p>
 					<i class="fa-solid fa-chevron-right"></i>
 				</div>
 				<div class="box">
 					<img src="components/img/thumb0.jpg">
 					<h3>lemon Tea</h3>
-					<p>lorem ispsum green tea </p>
+					<p>get some lemon flavers in tea </p>
 					<i class="fa-solid fa-chevron-right"></i>
 				</div>
 				<div class="box">
 					<img src="components/img/thumb1.jpg">
 					<h3>coffee Tea</h3>
-					<p>lorem ispsum green tea </p>
+					<p>coffe the great </p>
 					<i class="fa-solid fa-chevron-right"></i>
 				</div>
 				<div class="box">
 					<img src="components/img/thumb.jpg">
 					<h3>Normal Tea</h3>
-					<p>lorem ispsum green tea </p>
+					<p>make your wallet easiyer </p>
 					<i class="fa-solid fa-chevron-right"></i>
 				</div>
 			</div>
@@ -117,7 +117,7 @@ include 'style.css';
 				<img src="components/img/download.png">
 				<span>healthy tea</span>
 				<h1>save up to 20% off</h1>
-				<p>lorem ipsum discount</p>
+				<p>We make you healthier with discount</p>
 			</div>
 		</div> 
 		</section>

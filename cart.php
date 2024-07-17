@@ -159,7 +159,6 @@ include 'style.css';
 			<div class="cart-total">
 				<p>total amount : <span>$ <?=$grand_total; ?> /-</span></p>
 				<div class="button">
-					<a href="checkout.php?get_id=<?=$fetch_cart['product_id']; ?>"></a>
 					<a href="checkout.php" class="btn">proceed to checkout</a>
 				</div>
 			</div>

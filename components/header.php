@@ -17,7 +17,7 @@
  		<nav class="navbar">
  			<a href="home.php">home</a>
  			<a href="view_products.php">Meals</a>
- 			<a href="view_products.php">Beverages</a>
+ 			<a href="view_bev.php">Beverages</a>
  			<a href="view_order.php">Bookings</a>
  			<a href="tableres.php">Table Reserve</a>
  			<a href="register.php">my account</a>

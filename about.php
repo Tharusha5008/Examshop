@@ -61,7 +61,7 @@ include 'style.css';
 			<div class="title">
 				<img src="components/img/download.png" class="logo">
 				<h1>why choose us</h1>
-				<p>ay apiwa toragtte moko hetuwa</p>
+				<p>The Galler Cafe we offer Premium and 100% Healthy food for our customers not only in colombo also throught the world.</p>
 			</div>
 			<div class="box-container">
 				<div class="box">

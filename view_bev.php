@@ -32,7 +32,7 @@ if (isset($_POST['add_to_wishlist'])) {
 		$warning_msg[] = 'product already exist in your cart';
 		echo "<script>alert('product already exist in your cart');</script>";
 	}else{
-		$select_price = $conn->prepare("SELECT * FROM productst WHERE id = ? LIMIT 1");
+		$select_price = $conn->prepare("SELECT * FROM beverage WHERE id = ? LIMIT 1");
 		$select_price->execute([$product_id]);
 		$fetch_price = $select_price->fetch(PDO::FETCH_ASSOC);
 
@@ -63,7 +63,7 @@ if (isset($_POST['add_to_cart'])) {
 		$warning_msg[] = 'cart is full';
 		echo "<script>alert('cart is full.');</script>";
 	}else{
-		$select_price = $conn->prepare("SELECT * FROM productst WHERE id = ? LIMIT 1");
+		$select_price = $conn->prepare("SELECT * FROM beverage WHERE id = ? LIMIT 1");
 		$select_price->execute([$product_id]);
 		$fetch_price = $select_price->fetch(PDO::FETCH_ASSOC);
 
@@ -91,40 +91,45 @@ include 'style.css';
 	<?php include 'components/header.php'; ?>
 	<div class="main">
 		<div class="banner">
-			<h1>Product Detail</h1>
+			<h1>Shop</h1>
 		</div>
 		<div class="title2">
-			<a href="home.php">home  </a><span>/ product detail</span>
+			<a href="home.php">home  </a><span>/ our shop</span>
 		</div>
-		<section class="view_page">
-			<?php
-			if (isset($_GET['pid'])) {
-				$pid = $_GET['pid'];
-				$select_products = $conn->prepare("SELECT * FROM productst WHERE id = '$pid'");
+		<section class="products">
+			<div class="box-container">
+				<?php
+				$select_products = $conn->prepare("SELECT * FROM beverage");
 				$select_products->execute();
-				if ($select_products->rowCount() > 0) {
-					while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
-			?>
-			<form method="post">
-				<img src="components/product/<?php echo $fetch_products['image']; ?>">
-				<div class="detail">
-					<div class="price"><?php echo $fetch_products['price']; ?></div>
-					<div class="name"><?php echo $fetch_products['name']; ?></div>
-					<div class="product-detail">
-						<?php echo $fetch_products['product_detail']; ?>
-					</div>
-					<input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>">
-					<div class="button">
-						<button type="submit" name="add_to_wishlist" class="btn">add to wishlist</button>
-						<button type="submit" name="add_to_cart" class="btn">add to cart</button>
-					</div>
-				</div>
-			</form>	
-			<?php		
-					}
-				}
-			}
-			?>
+                if ($select_products->rowCount() >0) {
+                     while ($fetch_products = $select_products->fetch(PDO :: FETCH_ASSOC)) {
+                  ?>
+                <form action="" method="post" class="box">
+                   <img src="components/beverage/<?=$fetch_products['image'];?>" class="img">
+                   <div class="btn">
+                   	<button type="submit" name="add_to_cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button type="submit" name="add_to_wishlist"><i class="fa-solid fa-heart"></i></button>
+                    <a href="view_bevs.php?pid=<?php echo $fetch_products['id']; ?>" class="fa-solid fa-eye"></a>
+                   </div>
+                 <h3 class="name"><?= $fetch_products['name'];?></h3>
+                 <input type="hidden" name="product_id" value="<?=$fetch_products['id'];?>">
+                 <div class="flex">
+                 	<p class="price">price <?=$fetch_products['price'];?>/-</p>
+                 	<input type="number" name="qty" required min="1" max="99" maxlength="2" class="qty">
+
+                 </div>
+                 <a href="checkout.php?get_id=<?=$fetch_products['id']; ?>" class="btn">buy now </a>
+
+
+                </form>
+
+           <?php
+                    }
+                }else{
+                	echo '<p class="empty">no products added yet</p>';
+                }
+				?>
+			</div>
 		</section>
 		<!--home slider end-->
 		<?php include 'components/footer.php'; ?>

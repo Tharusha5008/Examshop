@@ -32,7 +32,7 @@ if (isset($_POST['add_to_wishlist'])) {
 		$warning_msg[] = 'product already exist in your cart';
 		echo "<script>alert('product already exist in your cart');</script>";
 	}else{
-		$select_price = $conn->prepare("SELECT * FROM productst WHERE id = ? LIMIT 1");
+		$select_price = $conn->prepare("SELECT * FROM beverage WHERE id = ? LIMIT 1");
 		$select_price->execute([$product_id]);
 		$fetch_price = $select_price->fetch(PDO::FETCH_ASSOC);
 
@@ -63,7 +63,7 @@ if (isset($_POST['add_to_cart'])) {
 		$warning_msg[] = 'cart is full';
 		echo "<script>alert('cart is full.');</script>";
 	}else{
-		$select_price = $conn->prepare("SELECT * FROM productst WHERE id = ? LIMIT 1");
+		$select_price = $conn->prepare("SELECT * FROM beverage WHERE id = ? LIMIT 1");
 		$select_price->execute([$product_id]);
 		$fetch_price = $select_price->fetch(PDO::FETCH_ASSOC);
 
@@ -100,13 +100,13 @@ include 'style.css';
 			<?php
 			if (isset($_GET['pid'])) {
 				$pid = $_GET['pid'];
-				$select_products = $conn->prepare("SELECT * FROM productst WHERE id = '$pid'");
+				$select_products = $conn->prepare("SELECT * FROM beverage WHERE id = '$pid'");
 				$select_products->execute();
 				if ($select_products->rowCount() > 0) {
 					while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
 			?>
 			<form method="post">
-				<img src="components/product/<?php echo $fetch_products['image']; ?>">
+				<img src="components/beverage/<?php echo $fetch_products['image']; ?>">
 				<div class="detail">
 					<div class="price"><?php echo $fetch_products['price']; ?></div>
 					<div class="name"><?php echo $fetch_products['name']; ?></div>

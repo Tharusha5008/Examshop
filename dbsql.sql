@@ -75,6 +75,19 @@ INSERT INTO productst (id, name, price, image, product_detail) VALUES
 ('19', 'Clam Chowder', '10.49', 'image19.webp', 'New England-style clam chowder with potatoes and bacon.'),
 ('20', 'Tiramisu', '6.99', 'image20.jpg', 'Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cheese.');
 
+CREATE TABLE beverage (
+    id VARCHAR(100),
+    name VARCHAR(100),
+    price VARCHAR(100),
+    image VARCHAR(100),
+    product_detail VARCHAR(200)
+);
+INSERT INTO beverage (id, name, price, image, product_detail) VALUES
+('25', 'Coca-Cola', '1.99', 'image25.webp', 'Classic Coca-Cola in a chilled bottle.'),
+('26', 'Lemonade', '2.49', 'image26.webp', 'Freshly squeezed lemonade with a hint of mint.'),
+('27', 'Iced Tea', '2.29', 'image27.jpg', 'Refreshing iced tea with lemon slices.'),
+('28', 'Orange Juice', '2.99', 'image28.webp', 'Freshly squeezed orange juice, rich in vitamin C.'),
+('29', 'Milkshake', '3.49', 'image29.webp', 'Creamy vanilla milkshake topped with whipped cream.');
 
 
 
@@ -87,3 +100,89 @@ price varchar(100)
 INsert into user (name,email,password) values (nn,nn,mn);
 select*from wishlist;
 
+CREATE TABLE `tbl_booking` (
+  `id` int(11) NOT NULL,
+  `booking_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `emailid` varchar(255) NOT NULL,
+  `mobile` varchar(10) NOT NULL,
+  `booking_date` date NOT NULL,
+  `booking_time` time NOT NULL,
+  `adults` smallint(6) NOT NULL,
+  `childrens` smallint(6) NOT NULL,
+  `booking_status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0=New Booking; 1=Confirmed; 2=Rejected;',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ;
+
+CREATE TABLE `tbl_booking_status` (
+  `id` int(11) NOT NULL,
+  `booking_id` int(11) NOT NULL,
+  `table_no` varchar(255) NOT NULL,
+  `booking_status` varchar(255) NOT NULL COMMENT '1=Confirmed; 2=Rejected;',
+  `remarks` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `tbl_contact` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `tbl_table` (
+  `id` int(11) NOT NULL,
+  `table_no` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `user` (
+  `id` int(21) NOT NULL,
+  `username` varchar(21) NOT NULL,
+  `firstName` varchar(21) NOT NULL,
+  `lastName` varchar(21) NOT NULL,
+  `email` varchar(35) NOT NULL,
+  `phone` bigint(20) NOT NULL,
+  `userType` enum('0','1') NOT NULL DEFAULT '0' COMMENT '0=user\r\n1=admin',
+  `password` varchar(255) NOT NULL,
+  `joinDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
+
+INSERT INTO `user` (`id`, `username`, `firstName`, `lastName`, `email`, `phone`, `userType`, `password`, `joinDate`) VALUES
+(1, 'admin', 'admin', 'admin', 'admin@gmail.com', 9990105028, '1', '$2y$10$RhReit4tS4ghp5ZlkyHfS.K1Nl//nlXZ8lvglm0oCMNMomALHJ4ti', '2024-02-20 11:40:58');
+
+ALTER TABLE `tbl_booking`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `tbl_booking_status`
+  ADD PRIMARY KEY (`id`);
+  
+ALTER TABLE `tbl_contact`
+  ADD PRIMARY KEY (`id`);
+  
+ALTER TABLE `tbl_table`
+  ADD PRIMARY KEY (`id`);
+  
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`) USING BTREE,
+  ADD UNIQUE KEY `username` (`username`);
+  
+ALTER TABLE `tbl_booking`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  
+ALTER TABLE `tbl_booking_status`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  
+ALTER TABLE `tbl_contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  
+ALTER TABLE `tbl_table`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  
+ALTER TABLE `user`
+  MODIFY `id` int(21) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  
+select*from cart;
+DELETE FROM wishlist WHERE price IN (20, 10, 30);
